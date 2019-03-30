@@ -1,6 +1,6 @@
 # Column Widget
 
-<img src = "https://user-images.githubusercontent.com/40803579/55273394-f5274480-52f4-11e9-86fb-530934e10466.png" width = "340">
+<img src = "https://user-images.githubusercontent.com/40803579/55273577-97482c00-52f7-11e9-9052-368c9bf75054.png" width = "340">
 
 
 ## Getting Started
