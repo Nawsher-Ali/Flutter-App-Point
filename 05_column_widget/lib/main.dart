@@ -16,7 +16,7 @@ build(BuildContext context){
   return Scaffold(
 
     appBar: AppBar(
-      title:Text('This is awesome widget',style: TextStyle(color:Colors.white),),
+      title:Text('This is column widget',style: TextStyle(color:Colors.white),),
       backgroundColor:Colors.indigo[900],
     ),
 
@@ -39,7 +39,6 @@ build(BuildContext context){
             child:Icon(Icons.group_work,size:100,color:Colors.white)
           ),
           Container(
-            margin: EdgeInsets.only(top:10),
             height: 150,
             width:300,
             color:Colors.pink[900],
