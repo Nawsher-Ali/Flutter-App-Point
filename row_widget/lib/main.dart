@@ -21,10 +21,32 @@ class MyApp extends StatelessWidget{
       ),
 
       body:Center(
-        child:Row(
-          children:<Widget> [
-            
-          ]
+        child:Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:<Widget> [
+              Container(
+                margin: EdgeInsets.only(right: 7),
+                color: Colors.blue[500],
+                height:300,
+                width:100,
+                child:Icon(Icons.laptop_windows,size:50,color:Colors.yellow[900])
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 7),
+                color: Colors.blue[500],
+                height:300,
+                width:100,
+                child:Icon(Icons.favorite_border,size:50,color:Colors.yellow[900])
+              ),
+              Container(
+                color: Colors.blue[500],
+                height:300,
+                width:100,
+                child:Icon(Icons.add_shopping_cart,size:50,color:Colors.yellow[900])
+              )
+            ]
+          ),
         )
       )
     );
