@@ -8,3 +8,4 @@
 2. [AppBar and TextStyle](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/scaffold_and_appbar)
 3. [Container and Icon](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/container_widget)
 4. [StatelessWidget Demo](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/statelesswidget_demo)
+5. [Column Widget](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/column_widget)
