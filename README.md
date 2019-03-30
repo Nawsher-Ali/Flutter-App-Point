@@ -8,3 +8,4 @@
 3. [Container and Icon](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/03_container_with_icon_widget)
 4. [StatelessWidget Demo](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/04_statelesswidget_demo)
 5. [Column Widget](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/05_column_widget)
+6. [Row Widget](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/06_row_widget)
