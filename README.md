@@ -10,3 +10,4 @@
 5. [Column Widget](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/05_column_widget)
 6. [Row Widget](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/06_row_widget)
 7. [StatefulWidget Demo](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/07_statefulwidget_demo)
+8. [BottomNavigationBar Demo](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/08_bottom_navigation_bar)
