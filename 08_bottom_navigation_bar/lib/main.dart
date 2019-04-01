@@ -25,16 +25,27 @@ class HomePage extends StatefulWidget{
 }
 
 
-class _HomePageState extends State<HomePage>{
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
+
+  TabController controller;
 
   int currentTabIndex = 0;
-  final List<Widget> children = [
-    PlaceHoldWidget(Icon(Icons.home,size:100,color:Colors.deepPurple)),
-    PlaceHoldWidget(Icon(Icons.portrait,size:100,color:Colors.deepOrangeAccent)),
-    PlaceHoldWidget(Icon(Icons.place,size:100,color:Colors.blue[900])),
-    PlaceHoldWidget(Icon(Icons.favorite_border,size:100,color:Colors.redAccent[400])),
 
-  ];
+  @override
+  void initState() {
+    super.initState();
+    controller = TabController(
+      length: 4,
+      vsync: this,
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -43,16 +54,22 @@ class _HomePageState extends State<HomePage>{
       appBar: AppBar(
         title:Text('Exploring Bottom NavBar'),
         backgroundColor:Colors.indigo[900]
-        
       ),
 
-      body:children[currentTabIndex],
+      body:TabBarView(
+        controller: controller,
+        children: <Widget>[
+          PlaceHoldWidget(Icon(Icons.home,size:100,color:Colors.deepPurple)),
+          PlaceHoldWidget(Icon(Icons.portrait,size:100,color:Colors.deepOrangeAccent)),
+          PlaceHoldWidget(Icon(Icons.place,size:100,color:Colors.blue[900])),
+          PlaceHoldWidget(Icon(Icons.favorite_border,size:100,color:Colors.redAccent[400])),
+        ],
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: currentTabIndex,
         type:BottomNavigationBarType.fixed,
-        // backgroundColor: ColorSwatch(currentTabIndex, ),
         items: [
           BottomNavigationBarItem(
             icon:Icon(Icons.home,color:Colors.deepPurple),
@@ -78,6 +95,8 @@ class _HomePageState extends State<HomePage>{
     );
   }
 
+
+  //this method is used for currently selected tab index 
   void onTabTapped(int index){
     setState((){
       currentTabIndex = index;
