@@ -25,24 +25,17 @@ class HomePage extends StatefulWidget{
 }
 
 
-
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
 
   int currentTabIndex = 0;
   TabController controller;
 
-  List<Widget> children = [
-    GetBodyWidget(Icon(Icons.home,size:100,color:Colors.redAccent)),
-    GetBodyWidget(Icon(Icons.contacts,size:100,color:Colors.blue[600])),
-    GetBodyWidget(Icon(Icons.settings,size:100,color:Colors.pink[900])),
-    GetBodyWidget(Icon(Icons.share,size:100,color:Colors.blue[900])),
-  ];
 
   @override
   void initState() {
     super.initState();
     controller = TabController(
-      length: children.length,
+      length: 4,
       vsync: this,
     );
   }
@@ -52,7 +45,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     super.dispose();
     controller.dispose();
   }
-
 
 
   //this is method is used for build your choose UI
@@ -66,8 +58,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         backgroundColor: Colors.deepPurple[900],
         ),
 
-      body:children[currentTabIndex],
-
+      body:TabBarView(
+       controller: controller,
+       children: <Widget>[
+          GetBodyWidget(Icon(Icons.home,size:100,color:Colors.redAccent)),
+          GetBodyWidget(Icon(Icons.contacts,size:100,color:Colors.blue[600])),
+          GetBodyWidget(Icon(Icons.settings,size:100,color:Colors.pink[900])),
+          GetBodyWidget(Icon(Icons.share,size:100,color:Colors.blue[900])),
+       ],
+      )
     );
   }
 
