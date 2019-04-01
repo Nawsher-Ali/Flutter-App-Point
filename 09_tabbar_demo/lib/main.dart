@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './tab_screen.dart';
 
+
+//entry point in app
 void main(){
   runApp(
     MaterialApp(
@@ -51,6 +53,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     controller.dispose();
   }
 
+
+
+  //this is method is used for build your choose UI
   @override
   build(BuildContext context){
     return Scaffold(
@@ -66,12 +71,16 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     );
   }
 
+
+  // this method is used for changing tab index
   onTapTapped(int index){
     setState(() {
       currentTabIndex = index;
     });
   }
 
+
+  //this method is creating tab bar
   getTabBar(){
     return TabBar(
           controller: controller,
