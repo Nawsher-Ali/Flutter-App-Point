@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       appBar: AppBar(
         title:Text('Exploring Bottom NavBar'),
         backgroundColor:Colors.indigo[900]
-      ),
+      ),//AppBar
 
       body:TabBarView(
         controller: controller,
@@ -64,36 +64,44 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           PlaceHoldWidget(Icon(Icons.place,size:100,color:Colors.blue[900])),
           PlaceHoldWidget(Icon(Icons.favorite_border,size:100,color:Colors.redAccent[400])),
         ],
-      ),
-
+      ),//TabBarView
+      
+      //Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: currentTabIndex,
         type:BottomNavigationBarType.fixed,
         items: [
+         
+          // TabBar item 1
           BottomNavigationBarItem(
             icon:Icon(Icons.home,color:Colors.deepPurple),
             title:Text("Home")
           ),
-
+          
+         // TabBar item 2
           BottomNavigationBarItem(
             icon:Icon(Icons.portrait,color:Colors.deepOrangeAccent),
             title:Text("Contacts")
           ),
-
+          
+          // TabBar item 3
           BottomNavigationBarItem(
             icon:Icon(Icons.place,color:Colors.blue[900]),
             title:Text("Place")
           ),
-
+          
+          // TabBar item 4
           BottomNavigationBarItem(
             icon:Icon(Icons.favorite_border,color:Colors.redAccent[400]),
             title: Text('Favorites')
           )
+         
         ],
-      ),
-    );
-  }
+      ),//BottomNavigationBar
+     
+    );//Scaffold
+  }//build method
 
 
   //this method is used for currently selected tab index 
@@ -102,4 +110,5 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       currentTabIndex = index;
     });
   }
+ 
 }

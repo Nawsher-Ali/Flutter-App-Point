@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './third_page.dart';
 
 class SecondPage extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return Scaffold(
@@ -9,7 +10,7 @@ class SecondPage extends StatelessWidget{
       appBar:AppBar(
         title:Text('Second Page'),
         backgroundColor:Colors.indigo[900],
-      ),
+      ),//AppBar
       
       body:Container(
         color:Colors.teal[400],
@@ -40,9 +41,11 @@ class SecondPage extends StatelessWidget{
               )
 
             ]
-          )
-        )
-      ),
-    );
-  }
+          )//Column
+        )//Center
+      ),//Container of body
+      
+    );//Scaffold
+  }//build method end
+  
 }

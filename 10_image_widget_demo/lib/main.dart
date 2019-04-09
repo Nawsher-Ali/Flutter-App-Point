@@ -18,11 +18,13 @@ class MyApp extends StatelessWidget{
       appBar:AppBar(
         title:Text('Exploring AssetImage'),
         backgroundColor:Colors.blue[900],
-      ),
+      ),//AppBar
 
       body:Container(
         child:Column(
           children:<Widget>[
+            
+            // padding of image
             Padding(
               padding:EdgeInsets.all(5),
               child:Image.asset(
@@ -32,6 +34,8 @@ class MyApp extends StatelessWidget{
                 filterQuality: FilterQuality.medium,
               ),
             ),
+            
+            // image describe
             Text(
               'Awesome Mosque in Bangladesh',
               style:TextStyle(
@@ -41,9 +45,12 @@ class MyApp extends StatelessWidget{
               ),
               textAlign: TextAlign.center,
             )
+            
           ]
-        )
-      )
-    );
-  }
+        )//Column
+        
+      )//Container
+    );//Scaffold
+    
+  }//build method
 }

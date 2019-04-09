@@ -15,9 +15,10 @@ class MyApp extends StatelessWidget{
   build(BuildContext context){
     return Scaffold(
       
-      appBar: AppBar(title:Text('Exploring Alert Dialog'),
-      backgroundColor:Colors.deepPurpleAccent
-      ),
+      appBar: AppBar(
+        title:Text('Exploring Alert Dialog'),
+        backgroundColor:Colors.deepPurpleAccent
+      ),//AppBar
 
       body:Container(
         child:ListView(
@@ -29,10 +30,12 @@ class MyApp extends StatelessWidget{
             getCard(context,'assets/j.jpg'),
             getCard(context,'assets/l.jpg'),
           ]
-        )
-      )
-    );
-  }
+        )//ListView
+      )//Container
+      
+    );//Scaffold
+    
+  }//build method end
 
 
 
@@ -42,6 +45,7 @@ class MyApp extends StatelessWidget{
    return Card(
       child: Column(
         children: <Widget>[
+          
           Image.asset(imageName),
 
           Padding(
@@ -49,14 +53,19 @@ class MyApp extends StatelessWidget{
             child:Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
+                
               Text('Fried Chicken'),
+                
               Text('Price 10\$'),
+                
               Text('Thakurgoan,Bangladesh'),
+                
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
 
                  Icon(Icons.favorite_border,color:Colors.redAccent),
+                  
                  Icon(Icons.share,color:Colors.blue[900]),
                    
                  FlatButton(
@@ -66,23 +75,27 @@ class MyApp extends StatelessWidget{
                   child: Text('ORDER',style:TextStyle(color:Colors.white)),
                   color:Colors.deepPurpleAccent
                  )
+                  
                 ],
-              )
+              )//Row
             ],
-          )
-        )
+          )//Column
+        )//Padding
       ]
-    ),
-  );
- }
+    ),//Column
+  );//Card
+ }//getCard method
 
 
 
  // this is used for build AlertDialog widget
  getAlertDialog(BuildContext context){
    return showDialog(
+     
      barrierDismissible: false,
+     
      context: context,
+     
      builder: (context){
        return AlertDialog(
          title: Text('Are you sure buy this product?'),
@@ -103,9 +116,9 @@ class MyApp extends StatelessWidget{
            )
 
          ],
-       );
+       );//AlertDialog
      }
-   );
- }
+   );//showDialog
+ }//getAlertDialog
 
 }

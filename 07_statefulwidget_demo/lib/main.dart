@@ -32,35 +32,41 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
 
-      appBar:AppBar(title:Text('Floating Action Button'),
-      backgroundColor:Colors.indigo[900],
-      ),
+      appBar:AppBar(
+       title:Text('Floating Action Button'),
+       backgroundColor:Colors.indigo[900],
+      ),//AppBar
 
       body:Center(
         child:Column(
           mainAxisAlignment:MainAxisAlignment.center,
           children: <Widget>[
+            
             Text(
               'Your Increment Value is : $counter',
               style:TextStyle(fontSize:22,color:Colors.indigo[900])
-            ),
+            ),//Text
+            
           ],
-        )
-      ),
-
+        )//Column
+      ),//Center
+      
+      
+      //Floating action button
       floatingActionButton: FloatingActionButton(
         onPressed:increment,
         child:Icon(Icons.add),
         backgroundColor: Colors.deepPurple,
         foregroundColor: Colors.white,
       ),
-    );
-  }
+      
+    );//Scaffold
+  }//build method
 
   void increment(){
     setState(() {
      counter++;
     });
-  }
+  }//increment method
 
 }

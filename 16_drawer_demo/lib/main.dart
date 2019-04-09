@@ -12,6 +12,7 @@ void main(){
 
 
 class MyApp extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return Scaffold(
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget{
       appBar: AppBar(
         title:Text('Exploring Drawer Demo'),
         backgroundColor: Colors.deepPurpleAccent[700],
-      ),
+      ),//AppBar
 
       body: Container(
         color:Colors.red[200],
@@ -28,10 +29,11 @@ class MyApp extends StatelessWidget{
             Icons.favorite_border,
             size:200,
             color:Colors.teal
-          ),
-        ),
-      ),
+          ),//Icon
+        ),//Center
+      ),//Container
 
+      
       drawer: Drawer(
         child:ListView(
           children:<Widget>[
@@ -52,6 +54,7 @@ class MyApp extends StatelessWidget{
                   bottom:33,
                   child: Text('Flutter Developer',style:TextStyle(color:Colors.redAccent,fontSize:22)),
                 ),
+                
                 Positioned(
                   bottom: 10,
                   left: 10,
@@ -59,32 +62,42 @@ class MyApp extends StatelessWidget{
                 ),
 
               ],
-            ),
+            ),//Stack
             
+            
+            // ListTile 1 in drawer
             getListTile(
               Icon(Icons.bookmark_border,color:Colors.deepOrange,size:40),
                Colors.deepPurpleAccent, 
                'Book Marks', context
             ),
-
+            
+            
+            // ListTile 2 in drawer
             getListTile(
               Icon(Icons.archive,color:Colors.pink[400],size:40),
                Colors.deepPurpleAccent, 
                'Archive', context
             ),
-
+            
+            
+            // ListTile 3 in drawer
             getListTile(
               Icon(Icons.brightness_medium,color:Colors.blue,size:40),
                Colors.deepPurpleAccent, 
                'Theme Setting', context
             ),
-
+            
+            
+            // ListTile 4 in drawer
             getListTile(
               Icon(Icons.star_border,color:Colors.redAccent,size:40),
                Colors.deepPurpleAccent, 
                'Star', context
             ),
-
+            
+            
+            // ListTile 5 in drawer
             getListTile(
               Icon(Icons.mail_outline,color:Colors.deepPurpleAccent,size:40),
               Colors.deepPurpleAccent, 
@@ -93,10 +106,11 @@ class MyApp extends StatelessWidget{
             )
 
           ]
-          ),
-        )
-    );
-  }
+         ),//ListView
+       )//Drawer
+      
+    );//Scaffold
+  }//build method end
 
 
   // this is used for build listTile
@@ -106,12 +120,9 @@ class MyApp extends StatelessWidget{
       leading:icon,
       title:Text(iconName),
       onTap: (){
-       Navigator.push(context, MaterialPageRoute(
-         builder: (BuildContext context) => ShowWidget(icon,iconName)
-         )
-       );
+       Navigator.push(context,MaterialPageRoute( builder: (BuildContext context) => ShowWidget(icon,iconName)));
       },
-    );
+    );//ListTile
   }
 
 

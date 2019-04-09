@@ -10,7 +10,7 @@ class ThirdPage extends StatelessWidget{
       appBar:AppBar(
         title:Text('Third Page'),
         backgroundColor: Colors.blue[900],
-      ),
+      ),//AppBar
 
       body:Container(
         color:Colors.green,
@@ -38,9 +38,13 @@ class ThirdPage extends StatelessWidget{
                 color:Colors.deepOrange,
               )
             ]
-          )
-        )
-      )
-    );
-  }
+          )//Column
+          
+        )//Center
+        
+      )//Container
+      
+    );//Scaffold
+  }//build method end
+  
 }

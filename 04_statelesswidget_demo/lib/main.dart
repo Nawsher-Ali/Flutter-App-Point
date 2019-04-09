@@ -20,16 +20,19 @@ class MyApp extends StatelessWidget{
          style:TextStyle(color:Colors.white)
         ),
         backgroundColor: Colors.deepPurpleAccent,
-      ),
+      ),//AppBar
 
       body:Center(
+        
         child: Container(
           height: 400,
           width:300,
           color:Colors.indigo[900],
           child:Icon(Icons.laptop_mac,size:100,color:Colors.redAccent)
-        ),
-      )
-    );
+        ),//Container
+        
+      )//Center
+      
+    );//Scaffold
   }
 }

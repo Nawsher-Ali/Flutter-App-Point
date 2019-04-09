@@ -13,13 +13,22 @@ void main(){
 
 
 class MyApp extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return Scaffold(
 
+<<<<<<< HEAD
       appBar:AppBar(title: Text('Exploring Text Fields'),
       backgroundColor: Colors.deepPurpleAccent,
       ),
+=======
+      appBar:AppBar(
+        title: Text('Exploring Text Fields'),
+        backgroundColor: Colors.deepPurpleAccent,
+      ),//AppBar
+
+>>>>>>> 107022d2d9f844043a7cf8d807f96e3a877b4371
       body:Container(
         padding:EdgeInsets.all(10),
         child: ListView(
@@ -29,6 +38,8 @@ class MyApp extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.center,
               children:<Widget>[
                
+                
+              //Text for welcome login screen  
               Text(
                 'Welcome',
                 style:TextStyle(
@@ -36,7 +47,9 @@ class MyApp extends StatelessWidget{
                   color:Colors.pink[900],
                   fontWeight: FontWeight.bold)
               ),
-
+              
+                
+              // container for face avater
               Container(
                 padding: EdgeInsets.only(left: 110,top:15,),
                 child:ListTile(
@@ -47,7 +60,9 @@ class MyApp extends StatelessWidget{
                   ),
                 )
               ),  
-
+              
+                
+              //padding of login text
               Padding(
                 padding: EdgeInsets.only(top:15,bottom:15),
                 child: Text(
@@ -59,7 +74,9 @@ class MyApp extends StatelessWidget{
                     )
                 ),
               ),
-
+              
+                
+              // TextField for e-mail
               TextField(
                 keyboardType:TextInputType.text,
                 decoration:InputDecoration(
@@ -70,49 +87,62 @@ class MyApp extends StatelessWidget{
                   labelText: 'E-mail',
                 ),
               ),
-
+              
+                
+              // padding of password TextField
               Padding(
                 padding: EdgeInsets.only(top:10,bottom:15),
                 child: TextField(
+                  
                   keyboardType:TextInputType.text,
+                  
                   obscureText: true,
+                  
                   decoration:InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30),
                       borderSide: BorderSide(color:Colors.blue[900]),
-                      
                     ),
+                    
                     labelText: 'Password',
-
-                  ),
-                  ),
-              ),
-
+                   ),
+                 ),
+               ),
+               
+              // padding of text
               Padding(
                 padding: EdgeInsets.only(bottom:10),
-                child: Text('Login With',style:TextStyle(
-                    fontSize:22,
-                    color:Colors.teal[900],
-                    fontWeight:FontWeight.bold,
+                child: Text(
+                  'Login With',
+                   style:TextStyle(
+                      fontSize:22,
+                      color:Colors.teal[900],
+                      fontWeight:FontWeight.bold,
                     )
                 ),
               ),
-
-              GoogleSignInButton(onPressed: () {},
-              text: 'Login with Google',
-              darkMode: true,
-              borderRadius: 15,
-
+              
+               // google login button 
+              GoogleSignInButton(
+                onPressed: () {},
+                text: 'Login with Google',
+                darkMode: true,
+                borderRadius: 15,
               ),
-
+              
+                
+              //padding of facebook button
               Padding(
                 padding: EdgeInsets.only(top:10,bottom:10),
-                              child: FacebookSignInButton(onPressed: () {},
-                text: 'Login with Google',
-                borderRadius: 15,
-                
-                ),
+                child: FacebookSignInButton(
+                  onPressed: () {},
+                  text: 'Login with Google',
+                  borderRadius: 15,
+                 ),
               ),
+                
+                
+              //padding of submit button   
               Padding(
                 padding: EdgeInsets.only(top:15),
                 child: MaterialButton(
@@ -123,17 +153,19 @@ class MyApp extends StatelessWidget{
                   color:Colors.deepPurpleAccent,
                  highlightColor: Colors.redAccent,
                  height: 50,
-                ),
-              ),
+                ),//MaterialButton
+              ),//Padding
 
               ]
-            ),
+            ),//Column
           ] 
-        )
-      ),
-    );
-  }
+        )//ListView
+      ),//Container
+    );//Scaffold
+  }//build method end
 
+  
+  //this method is used for create alert dialog
   getAlertDialog(BuildContext context){
     return showDialog(
       context:context,
@@ -144,15 +176,18 @@ class MyApp extends StatelessWidget{
           titleTextStyle: TextStyle(color:Colors.white,fontSize: 22),
           backgroundColor: Colors.teal[900],
           actions: <Widget>[
+            
             FlatButton(
               onPressed: (){
                 Navigator.pop(context);
               },
               child: Text('OK',style:TextStyle(color:Colors.deepOrangeAccent,fontSize: 20)),
             )
+            
           ],
-        );
+        );//AlertDialog
       }
-    );
-  }
+    );//showDialog
+  }//getAlertDialog method end
+  
 }
