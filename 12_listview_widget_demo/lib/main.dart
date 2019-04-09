@@ -45,14 +45,14 @@ class MyApp extends StatelessWidget{
   // get ListTile
   getListTile(title,subTitle,color){
     return ListTile(
-            leading: CircleAvatar(
-              child:Icon(Icons.person,size: 30,),
-              backgroundColor: color,
-              radius: 30,
-            ),
-            title:Text(title,style:TextStyle(fontSize:20,)),
-            subtitle: Text(subTitle,),
-            trailing: Icon(Icons.call),
+      leading: CircleAvatar(
+        child:Icon(Icons.person,size: 30,),
+        backgroundColor: color,
+        radius: 30,
+      ),
+      title:Text(title,style:TextStyle(fontSize:20,)),
+      subtitle: Text(subTitle,),
+      trailing: Icon(Icons.call),
     );
   }//ListTile
 }
