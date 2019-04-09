@@ -8,15 +8,18 @@ void main(){
       debugShowCheckedModeBanner:false,
     )
   );
-}
+}// main method end
 
 class MyApp extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return Scaffold(
-      appBar:AppBar(title:Text('ListView Widget Exploring'),
-      backgroundColor:Colors.blue[900]
-      ),
+      
+      appBar:AppBar(
+       title:Text('ListView Widget Exploring'),
+       backgroundColor:Colors.blue[900]
+      ),//AppBar
 
       body:ListView(
         children: <Widget>[
@@ -34,11 +37,12 @@ class MyApp extends StatelessWidget{
           getListTile('Md Nahid', 'nahid@gmail.com',Colors.blue),
 
         ],
-      )
-    );
-  }
+      )//ListView
+    );//Scaffold
+  }//build method
 
-
+  
+  // get ListTile
   getListTile(title,subTitle,color){
     return ListTile(
             leading: CircleAvatar(
@@ -50,5 +54,5 @@ class MyApp extends StatelessWidget{
             subtitle: Text(subTitle,),
             trailing: Icon(Icons.call),
     );
-  }
+  }//ListTile
 }
