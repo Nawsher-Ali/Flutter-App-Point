@@ -11,7 +11,9 @@ void main(){
   );
 }
 
+
 class MyApp extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return Scaffold(
@@ -19,8 +21,9 @@ class MyApp extends StatelessWidget{
       appBar:AppBar(
         title:Text('First Page'),
         backgroundColor:Colors.deepPurpleAccent,
-      ),
+      ),//AppBar
 
+      
       body:Container(
         color:Colors.teal[400],
         child:Center(
@@ -29,7 +32,8 @@ class MyApp extends StatelessWidget{
             children:<Widget>[
 
               Icon(Icons.directions_car,size:100,color:Colors.white),
-
+              
+              //Padding for page title
               Padding(
                 padding:EdgeInsets.only(top:30,bottom:30),
                 child: Text(
@@ -38,7 +42,8 @@ class MyApp extends StatelessWidget{
                   fontWeight: FontWeight.bold)
                 )
               ),
-
+              
+              //Raised Button go ot page
               RaisedButton(
                 onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SecondPage()));
@@ -51,9 +56,10 @@ class MyApp extends StatelessWidget{
               )
 
             ], 
-          )
-        ),
-      )
-    );
-  }
+          )//Column
+        ),//Center
+      )//Container
+    );//Scaffold
+  }//build method end
+  
 }
