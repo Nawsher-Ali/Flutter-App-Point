@@ -14,7 +14,7 @@ void main(){
       home:MyApp()
     )
   );
-}
+}// main method end
 
 class MyApp extends StatelessWidget{
   @override
@@ -68,24 +68,24 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           getTab('Action Button',Colors.lightBlueAccent),
           getTab('DropDown Button',Colors.tealAccent),
          ],
-        ),
-      ),
+        ),//TabBar
+      ),//AppBar
 
-    body: TabBarView(
-      controller: controller,
-      children: <Widget>[
-        RaisedButtonShow(),
-        FlatButtonShow(),
-        OutlineButtonShow(),
-        IconButtonShow(),
-        ActionButtonShow(),
-        DropdownButtonShow(),
-      ],
-    ),
+      body: TabBarView(
+        controller: controller,
+        children: <Widget>[
+          RaisedButtonShow(),
+          FlatButtonShow(),
+          OutlineButtonShow(),
+          IconButtonShow(),
+          ActionButtonShow(),
+          DropdownButtonShow(),
+        ],
+      ),//TabBarView
+    );//Scaffold
+  }//build method end
 
-  );
-}
-
+  
   //this method is used for build Tab
   getTab(buttonNames,color){
     return Tab(
