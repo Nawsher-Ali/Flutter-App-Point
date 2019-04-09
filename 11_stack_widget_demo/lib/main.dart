@@ -11,18 +11,22 @@ void main(){
 }
 
 class MyApp extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return Scaffold(
+      
       appBar:AppBar(
         title:Text('Stack Widget Demo'),
         backgroundColor: Colors.deepPurple[900],
-      ),
-
+      ),//AppBar
+      
       body:Stack(
         children: <Widget>[
+          
           //Image 1
           Image.asset('assets/image1.jpg',),
+          // image title 1
           Positioned(
             bottom:8,
             left: 5,
@@ -43,6 +47,7 @@ class MyApp extends StatelessWidget{
             width:250,
             height:150,
           ),
+          // image title 2
           Positioned(
             bottom:100,
             left: 5,
@@ -62,6 +67,7 @@ class MyApp extends StatelessWidget{
             width:140,
             height:100,
           ),
+          // image title 3
           Positioned(
             top:70,
             left: 5,
@@ -71,12 +77,13 @@ class MyApp extends StatelessWidget{
                 fontSize:18,
                 color:Colors.deepOrange,
                 fontWeight: FontWeight.bold,
-                ),
+              ),
             ),
           ),
 
         ],
-      )
-    );
+      )//Stack
+    );//Scaffold
+    
   }
 }
