@@ -13,15 +13,19 @@ void main(){
 }
 
 class MyApp extends StatelessWidget{
+  
   @override
   build(BuildContext context){
     return HomePage();
- }
+  }
+  
 }
 
 class HomePage extends StatefulWidget{
+  
   @override
   _HomePageState createState() => _HomePageState();
+  
 }
 
 
@@ -56,7 +60,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         title:Text('Exploring Tab Bar'),
         bottom:getTabBar(),
         backgroundColor: Colors.deepPurple[900],
-        ),
+      ),//AppBar
 
       body:TabBarView(
        controller: controller,
@@ -66,9 +70,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           GetBodyWidget(Icon(Icons.settings,size:100,color:Colors.pink[900])),
           GetBodyWidget(Icon(Icons.share,size:100,color:Colors.blue[900])),
        ],
-      )
-    );
-  }
+      )//TabBarView
+      
+    );//Scaffold
+  }//build method
 
 
   // this method is used for changing tab index
@@ -81,31 +86,39 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   //this method is creating tab bar
   getTabBar(){
+    
     return TabBar(
-          controller: controller,
-          onTap: onTapTapped,
-          tabs: <Widget>[
-            Tab(
-              icon: Icon(Icons.home,),
-              text:'Home',
-            ),
-
-            Tab(
-              icon: Icon(Icons.contact_mail),
-              text:'Contacts'
-            ),
-
-            Tab(
-              icon: Icon(Icons.settings),
-              text:'Settings'
-            ),
-
-            Tab(
-              icon: Icon(Icons.share),
-              text:'Share'
-            )
-          ],
-        );
-  }
+      controller: controller,
+      onTap: onTapTapped,
+      tabs: <Widget>[
+        
+        //tab 1
+        Tab(
+          icon: Icon(Icons.home,),
+          text:'Home',
+        ),
+        
+        // tab 2
+        Tab(
+          icon: Icon(Icons.contact_mail),
+          text:'Contacts'
+        ),
+        
+        //tab 3
+        Tab(
+          icon: Icon(Icons.settings),
+          text:'Settings'
+        ),
+        
+        //tab 4
+        Tab(
+          icon: Icon(Icons.share),
+          text:'Share'
+        )
+        
+      ],
+    );//TabBar
+    
+  }//getTabBar method
   
-}
+}// _HomePageState class
