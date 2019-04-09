@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget{
       appBar:AppBar(title: Text('Exploring Text Fields'),
       backgroundColor: Colors.deepPurpleAccent,
       ),
-
       body:Container(
         padding:EdgeInsets.all(10),
         child: ListView(
