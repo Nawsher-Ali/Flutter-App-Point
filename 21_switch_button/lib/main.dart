@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp>{
                   // setTheme();
                   str == "ON" ? setTheme():setDefault();
                 },
-              ),
+              ),//Switch
 
               Padding(
                 padding: EdgeInsets.all(20),
@@ -60,15 +60,15 @@ class _MyAppState extends State<MyApp>{
                   'My Theme : $str',
                   style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)
                 )
-              ),
+              ),//Padding
 
             ],
-          )
-        )
-      )
-    ); 
+          )//Column
+        )//Center
+      )//Container
+    );//Scaffold
 
-  }
+  }//build method end
 
 
   // this method is used for change theme
