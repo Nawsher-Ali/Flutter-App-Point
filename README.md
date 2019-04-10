@@ -23,4 +23,4 @@
 18. [Text Fields](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/18_text_fields)
 19. [CheckBox Demo](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/19_check_boxs)
 20. [RadioButton Demo](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/20_radio_buttons)
-
+21. [Switch Button](https://github.com/Nawsher-Ali/Flutter-App-Point/tree/master/21_switch_button)
