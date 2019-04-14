@@ -1,16 +1,7 @@
-# all_test_now
+# Draggable Widget Demo
 
-A new Flutter project.
+<img src = "https://user-images.githubusercontent.com/40803579/56090094-13796c80-5ebf-11e9-9d05-0648b4b69c13.gif" width = "340">
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+For help getting started with Flutter,view online [documentation](https://flutter.dev).
