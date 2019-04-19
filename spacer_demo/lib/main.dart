@@ -25,16 +25,22 @@ class MyApp extends StatelessWidget{
       body:Center(
         child: Row(
           children: <Widget>[
+
             Text('one',style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)
             ),
+
             Spacer(
               flex:3
             ),
+
             Text('two',style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)),
+
             Spacer(
               flex:1
             ),
+
             Text('three',style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)),
+            
           ],
         ),
       )
