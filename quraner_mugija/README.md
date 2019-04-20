@@ -1,4 +1,4 @@
-# data_table
+# quraner_mugija
 
 A new Flutter project.
 

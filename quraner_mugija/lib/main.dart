@@ -1,16 +1,16 @@
-import 'package:data_table/pages/eight_page.dart';
-import 'package:data_table/pages/eleven_page.dart';
-import 'package:data_table/pages/five_page.dart';
-import 'package:data_table/pages/four_page.dart';
-import 'package:data_table/pages/nine_page.dart';
-import 'package:data_table/pages/second_page.dart';
-import 'package:data_table/pages/seven_page.dart';
-import 'package:data_table/pages/six_page.dart';
-import 'package:data_table/pages/ten_page.dart';
-import 'package:data_table/pages/third_page.dart';
-import 'package:data_table/pages/twelve.dart';
 import 'package:flutter/material.dart';
 import 'pages/first_page.dart';
+import 'pages/second_page.dart';
+import 'pages/third_page.dart';
+import 'pages/four_page.dart';
+import 'pages/five_page.dart';
+import 'pages/six_page.dart';
+import 'pages/seven_page.dart';
+import 'pages/eight_page.dart';
+import 'pages/nine_page.dart';
+import 'pages/ten_page.dart';
+import 'pages/eleven_page.dart';
+import 'pages/twelve.dart';
 
 
 void main(){
@@ -37,7 +37,8 @@ class QuranAppState extends State<QuranApp>{
     return Scaffold(
 
       appBar:AppBar(
-        title:Text('Data Table Widget'),
+        title:Text('কোরআনের মুজিঝা'),
+        centerTitle: true,
         backgroundColor:Colors.deepOrangeAccent,
       ),
 
@@ -51,88 +52,76 @@ class QuranAppState extends State<QuranApp>{
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                  //Material button 1
-                buildMaterialButton('section 1', FirstScreen()),
-                Divider(
-
-                ),
-
+                buildMaterialButton('মহাকাশ/Space - 1', FirstScreen()),
+                Divider(),
 
                 //Material button 2
-                buildMaterialButton('section 2', SecondScreen()),
-
-                 Divider(
-
-                ),
+                buildMaterialButton('মহাকাশ/Space - 2', SecondScreen()),
+                Divider(),
 
                 //Material button 3
-               buildMaterialButton('section 3', ThirdScreen()),
+               buildMaterialButton('মহাকাশ/Space - 3', ThirdScreen()),
+               Divider(),
 
-                 Divider(
-
-                ),
                 //Material button 4
-                 buildMaterialButton('section 4', FourScreen()),
-
-                Divider(
-
-                ),
+                buildMaterialButton('section 4', FourScreen()),
+                Divider(),
 
                 //Material button 5
                 buildMaterialButton('section 5', FiveScreen()),
-
-                Divider(
-
-                ),
+                Divider(),
 
                 //Material button 6
-               buildMaterialButton('section 6', SixScreen()),
-
-               Divider(
-
-               ),
+                buildMaterialButton('section 6', SixScreen()),
+                Divider(),
 
                 //Material button 7
                 buildMaterialButton('section 7', SevenScreen()),
-
-                 Divider(
-
-                ),
+                 Divider(),
 
                 //Material button 8
                 buildMaterialButton('section 8',EightScreen()),
-
-
-                 Divider(
-
-                ),
+                Divider(),
 
                 //Material button 9
                  buildMaterialButton('section 9', NineScreen()),
-
-
-                 Divider(
-
-                ),
+                 Divider(),
 
                 //Material button 10
                 buildMaterialButton('section 10', TenScreen()),
-
-
-                Divider(
-
-                ),
+                Divider(),
 
                 //Material button 11
                 buildMaterialButton('section 11', ElevenScreen()),
-
-
-                 Divider(
-
-                ),
+                Divider(),
 
                 //Material button 12
                 buildMaterialButton('section 12', TwelveScreen()),
+                Divider(),
 
+                //Material button 13
+                buildMaterialButton('section 13', TwelveScreen()),
+                Divider(),
+
+                //Material button 14
+                buildMaterialButton('section 14', TwelveScreen()),
+                Divider(),
+
+                //Material button 15
+                buildMaterialButton('section 15', TwelveScreen()),
+                Divider(),
+
+                //Material button 16
+                buildMaterialButton('section 16', TwelveScreen()),
+                Divider(),
+
+                //Material button 17
+                buildMaterialButton('section 17', TwelveScreen()),
+                Divider(),
+
+                //Material button 18
+                buildMaterialButton('section 18', TwelveScreen()),
+                Divider(),
 
               ],
             ),

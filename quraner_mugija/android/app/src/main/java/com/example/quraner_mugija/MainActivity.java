@@ -1,4 +1,4 @@
-package com.example.data_table;
+package com.example.quraner_mugija;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

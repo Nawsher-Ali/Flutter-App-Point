@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quraner_mugija/pages/second_page.dart';
 import '../main.dart';
-import 'package:data_table/pages/second_page.dart';
 
 
 class FirstScreen extends StatelessWidget{
@@ -19,11 +19,11 @@ class FirstScreen extends StatelessWidget{
           children: <Widget>[
 
             Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children:<Widget>[
 
-                obj1.buildMaterialButton('second step',SecondScreen()),
+                obj1.buildMaterialButton("পৃথিবীর আকার/Earth's size",SecondScreen()),
                 Divider(),
 
                 obj1.buildMaterialButton('second step',SecondScreen()),
